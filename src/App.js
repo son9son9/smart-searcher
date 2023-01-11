@@ -1,11 +1,10 @@
 import "./App.css";
+import Header from "../src/components/header.jsx";
 
 function App() {
   return (
     <div className="App">
-      <header>
-        <h1>Welcome to my web site!</h1>
-      </header>
+      <Header></Header>
       <nav>
         <ul>
           <li>
@@ -24,7 +23,7 @@ function App() {
         <p>I'm a web developer and designer. I love building beautiful and functional websites.</p>
       </main>
       <footer>
-        <p>Copyright 2021</p>
+        <p>Copyright 2023</p>
       </footer>
     </div>
   );
