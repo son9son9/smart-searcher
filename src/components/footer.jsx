@@ -10,7 +10,7 @@ const StyledFooter = styled.footer`
 function Footer() {
   return (
     <StyledFooter>
-      <p>Copyright 2023</p>
+      <p>Copyright 2023. Songsong All rights reserved.</p>
     </StyledFooter>
   );
 }

@@ -5,7 +5,6 @@ const StyledHeader = styled.header`
   justify-content: space-around;
   align-items: center;
   height: 80px;
-  border-bottom: 1px solid black;
 `;
 
 function Header() {
