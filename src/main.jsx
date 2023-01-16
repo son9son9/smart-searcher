@@ -9,7 +9,11 @@ const Wrapper = styled.div`
 const StyledMain = styled.main`
   padding: 20px;
 `;
-const SearchBar = styled.input.attrs((props) => ({
+const SearchBar = styled.div`
+  display: flex;
+  align-items: center;
+`;
+const SearchInput = styled.input.attrs((props) => ({
   type: "text",
 }))`
   /* init */
@@ -30,6 +34,23 @@ const SearchBar = styled.input.attrs((props) => ({
     outline: none;
   }
 `;
+const SearchButton = styled.button.attrs((props) => ({ type: "button" }))`
+  /* position */
+  position: absolute;
+  right: 0;
+
+  width: 60px;
+  height: 40px;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  transition: 0.05s;
+
+  &:active {
+    transform: translateY(2px);
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+  }
+`;
 const Comment = styled.p``;
 
 const Main = () => {
@@ -37,7 +58,10 @@ const Main = () => {
     <Wrapper>
       <Header></Header>
       <StyledMain>
-        <SearchBar></SearchBar>
+        <SearchBar>
+          <SearchInput></SearchInput>
+          <SearchButton></SearchButton>
+        </SearchBar>
         <Comment style={{ padding: "10px 0 10px 0" }} id={"comment"}>
           Search what you wanna!
         </Comment>
