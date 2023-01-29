@@ -19,12 +19,14 @@ const SearchInput = styled.input.attrs((props) => ({
   /* init */
   border: none;
 
-  width: 30vw;
+  width: 560px;
   height: 60px;
   padding: 0 16px 0 16px;
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2) inset;
+
+  transition: 100ms;
 
   /* input-text */
   color: #333;
@@ -32,6 +34,9 @@ const SearchInput = styled.input.attrs((props) => ({
 
   &:focus {
     outline: none;
+  }
+  &:active {
+    transform: scale(0.98);
   }
 `;
 const SearchButton = styled.button.attrs((props) => ({ type: "button" }))`
@@ -43,12 +48,13 @@ const SearchButton = styled.button.attrs((props) => ({ type: "button" }))`
   height: 40px;
   border-radius: 10px;
   border: none;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.3);
+  background-color: #fff;
   transition: 0.05s;
 
   &:active {
-    transform: translateY(2px);
-    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+    transform: scale(0.95);
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
   }
 `;
 const Comment = styled.p``;
