@@ -12,17 +12,22 @@ const StyledMain = styled.main`
 const SearchBar = styled.div`
   display: flex;
   align-items: center;
+  width: 20rem;
+  height: 3rem;
+  border: 3px solid transparent;
+  border-image: linear-gradient(to right, #667eea 0%, #764ba2 100%, #6b8dd6 100%);
+  border-image-slice: 1;
 `;
 const SearchInput = styled.input.attrs((props) => ({
   type: "text",
 }))`
   /* init */
-  border: none;
+  /* border: none; */
 
-  width: 560px;
-  height: 60px;
+  width: 85%;
+  height: 100%;
   padding: 0 16px 0 16px;
-  background-color: #fff;
+  background-color: transparent;
   border-radius: 10px;
   box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2) inset;
 
@@ -69,7 +74,7 @@ const Main = () => {
           <SearchButton></SearchButton>
         </SearchBar>
         <Comment style={{ padding: "10px 0 10px 0" }} id={"comment"}>
-          Search what you wanna!
+          Search what you want !
         </Comment>
       </StyledMain>
     </Wrapper>
