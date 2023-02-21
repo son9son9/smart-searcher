@@ -17,6 +17,12 @@ const SearchBar = styled.div`
   border: 3px solid transparent;
   border-image: linear-gradient(to right, #667eea 0%, #764ba2 100%, #6b8dd6 100%);
   border-image-slice: 1;
+
+  transition: 100ms;
+
+  &:active {
+    transform: scale(0.98);
+  }
 `;
 const SearchInput = styled.input.attrs((props) => ({
   type: "text",
@@ -40,14 +46,11 @@ const SearchInput = styled.input.attrs((props) => ({
   &:focus {
     outline: none;
   }
-  &:active {
-    transform: scale(0.98);
-  }
 `;
 const SearchButton = styled.button.attrs((props) => ({ type: "button" }))`
   /* position */
-  position: absolute;
-  right: 0;
+  /* position: absolute;
+  right: 0; */
 
   width: 60px;
   height: 40px;
