@@ -12,11 +12,18 @@ const StyledMain = styled.main`
 const SearchBar = styled.div`
   display: flex;
   align-items: center;
-  width: 20rem;
-  height: 3rem;
-  border: 3px solid transparent;
-  border-image: linear-gradient(to right, #667eea 0%, #764ba2 100%, #6b8dd6 100%);
-  border-image-slice: 1;
+  width: 24rem;
+  height: 3.5rem;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2) inset;
+  background-color: transparent;
+  padding: 2px;
+
+  border: 4px solid transparent;
+  border-radius: 10px;
+  background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #667eea 0%, #764ba2 100%, #6b8dd6 100%);
+  /* border-image-slice: 1; */
+  background-origin: border-box;
+  background-clip: content-box, border-box;
 
   transition: 100ms;
 
@@ -28,14 +35,13 @@ const SearchInput = styled.input.attrs((props) => ({
   type: "text",
 }))`
   /* init */
-  /* border: none; */
+  border: none;
 
   width: 85%;
   height: 100%;
-  padding: 0 16px 0 16px;
-  background-color: transparent;
-  border-radius: 10px;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2) inset;
+  padding: 0 12px 0 12px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 
   transition: 100ms;
 
@@ -52,18 +58,14 @@ const SearchButton = styled.button.attrs((props) => ({ type: "button" }))`
   /* position: absolute;
   right: 0; */
 
-  width: 60px;
-  height: 40px;
-  border-radius: 10px;
+  width: 15%;
+  height: 100%;
   border: none;
-  box-shadow: 0 0px 4px rgba(0, 0, 0, 0.3);
-  background-color: #fff;
-  transition: 0.05s;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
 
-  &:active {
-    transform: scale(0.95);
-    box-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
-  }
+  background-color: #ade883;
+  transition: 0.05s;
 `;
 const Comment = styled.p``;
 
