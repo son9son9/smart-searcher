@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const StyledFooter = styled.footer`
   background-color: #333;
-  color: #fff;
+  color: #929292;
   padding: 20px;
   text-align: center;
 `;
