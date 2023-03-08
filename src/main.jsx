@@ -18,7 +18,7 @@ const SearchBar = styled.div`
   background-color: transparent;
   padding: 2px;
 
-  border: 4px solid transparent;
+  border: 3px solid transparent;
   border-radius: 10px;
   background-image: linear-gradient(#fff, #fff), linear-gradient(to right, #667eea 0%, #764ba2 100%, #6b8dd6 100%);
   /* border-image-slice: 1; */
@@ -60,11 +60,11 @@ const SearchButton = styled.button.attrs((props) => ({ type: "button" }))`
 
   width: 15%;
   height: 100%;
-  border: none;
+  /* border: none; */
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 
-  background-color: #ade883;
+  background-color: transparent;
   transition: 0.05s;
 `;
 const Comment = styled.p``;
