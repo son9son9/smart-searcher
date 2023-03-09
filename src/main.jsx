@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Header from "./components/header";
+// import searchIcon from "./public/assets/search-icon.svg";
 
 const Wrapper = styled.div`
   display: grid;
@@ -60,7 +61,7 @@ const SearchButton = styled.button.attrs((props) => ({ type: "button" }))`
 
   width: 15%;
   height: 100%;
-  /* border: none; */
+  border: none;
   border-top-right-radius: 4px;
   border-bottom-right-radius: 4px;
 
