@@ -1,10 +1,12 @@
+import { useEffect } from "react";
 import styled from "styled-components";
 import Header from "./components/header";
-// import searchIcon from "./public/assets/search-icon.svg";
 
 const Wrapper = styled.div`
-  display: grid;
-  justify-content: space-around;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
 `;
 const StyledMain = styled.main`
@@ -13,9 +15,10 @@ const StyledMain = styled.main`
 const SearchBar = styled.div`
   display: flex;
   align-items: center;
+  justify-content: space-between;
+
   width: 24rem;
   height: 3.5rem;
-  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2) inset;
   background-color: transparent;
   padding: 2px;
 
@@ -59,7 +62,11 @@ const SearchButton = styled.button.attrs((props) => ({ type: "button" }))`
   /* position: absolute;
   right: 0; */
 
-  width: 15%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 13%;
   height: 100%;
   border: none;
   border-top-right-radius: 4px;
@@ -67,23 +74,36 @@ const SearchButton = styled.button.attrs((props) => ({ type: "button" }))`
 
   background-color: transparent;
   transition: 0.05s;
+
+  img {
+    width: 1.7rem;
+    height: auto;
+  }
 `;
 const Comment = styled.p``;
 
 const Main = () => {
+  // useEffect(() => {}, []);
+
+  const onSearch = (e) => {
+    console.log(e);
+  };
+
   return (
-    <Wrapper>
+    <>
       <Header></Header>
-      <StyledMain>
-        <SearchBar>
-          <SearchInput></SearchInput>
-          <SearchButton></SearchButton>
-        </SearchBar>
-        <Comment style={{ padding: "10px 0 10px 0" }} id={"comment"}>
-          Search what you want !
-        </Comment>
-      </StyledMain>
-    </Wrapper>
+      <Wrapper>
+        <StyledMain>
+          <SearchBar>
+            <SearchInput></SearchInput>
+            <SearchButton onClick={onSearch}>
+              <img src={process.env.PUBLIC_URL + "/assets/search-icon64px.png"} alt=""></img>
+            </SearchButton>
+          </SearchBar>
+          {/* <Comment style={{ padding: "10px 0 10px 0" }} id={"comment"}></Comment> */}
+        </StyledMain>
+      </Wrapper>
+    </>
   );
 };
 
